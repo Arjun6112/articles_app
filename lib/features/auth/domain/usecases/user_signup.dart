@@ -1,4 +1,4 @@
-import 'package:articles_app/features/auth/domain/entities/user.dart';
+import 'package:articles_app/core/common/entities/user.dart';
 import 'package:fpdart/fpdart.dart';
 
 import 'package:articles_app/core/error/failures.dart';

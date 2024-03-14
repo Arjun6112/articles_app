@@ -9,7 +9,6 @@ final class AuthLoading extends AuthState {}
 
 final class AuthSuccess extends AuthState {
   final User user;
-
   AuthSuccess(this.user);
 }
 

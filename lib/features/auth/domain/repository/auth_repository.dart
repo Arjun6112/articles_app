@@ -1,5 +1,5 @@
 import 'package:articles_app/core/error/failures.dart';
-import 'package:articles_app/features/auth/domain/entities/user.dart';
+import 'package:articles_app/core/common/entities/user.dart';
 import 'package:fpdart/fpdart.dart';
 
 abstract interface class AuthRepository {
@@ -13,4 +13,6 @@ abstract interface class AuthRepository {
     required String email,
     required String password,
   });
+
+  Future<Either<Failure, User>> getCurrentUserData();
 }
