@@ -6,6 +6,7 @@ import 'package:articles_app/core/theme/app_pallete.dart';
 import 'package:articles_app/core/utils/pick_image.dart';
 import 'package:articles_app/core/utils/show_snackbar.dart';
 import 'package:articles_app/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:articles_app/features/blog/domain/entities/blog.dart';
 import 'package:articles_app/features/blog/presentation/bloc/blog_bloc.dart';
 import 'package:articles_app/features/blog/presentation/pages/blog_pages.dart';
 import 'package:articles_app/features/blog/presentation/widgets/blog_editor.dart';
@@ -75,9 +76,8 @@ class _AddNewBlogPageState extends State<AddNewBlogPage> {
           child: BlocConsumer<BlogBloc, BlogState>(
             listener: (context, state) {
               if (state is BlogFailure) {
-                
                 showSnackbar(context, state.error);
-              } else if (state is BlogSuccess) {
+              } else if (state is BlogUploadSuccess) {
                 Navigator.pushAndRemoveUntil(
                     context, BlogPage.route(), (route) => false);
               }
