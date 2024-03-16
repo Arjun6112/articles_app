@@ -28,7 +28,12 @@ class _BlogPageState extends State<BlogPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Articulate'),
+        title: const Text('Articulate',
+            style: TextStyle(
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.bold,
+                fontSize: 30,
+                color: AppPallete.whiteColor)),
         centerTitle: true,
         actions: [
           IconButton(

@@ -20,7 +20,7 @@ class BlogCard extends StatelessWidget {
         Navigator.push(context, BlogViewerPage.route(blog));
       },
       child: Container(
-        height: 200,
+        height: 210,
         margin: const EdgeInsets.all(16).copyWith(
           bottom: 4,
         ),
@@ -51,6 +51,7 @@ class BlogCard extends StatelessWidget {
                 ),
                 Text(
                   overflow: TextOverflow.ellipsis,
+                  maxLines: 3,
                   blog.title,
                   style: const TextStyle(
                     fontSize: 22,
